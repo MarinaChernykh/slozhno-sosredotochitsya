@@ -17,7 +17,8 @@
   background-image: var(--bg-image);
   background-position: center;
   background-size: cover;
-  min-block-size: 100vh;
+  block-size: 100vh;
+  min-block-size: 668px;
 }
 
 .header__icon::before {
@@ -142,6 +143,11 @@
   line-height: inherit;
 }
 
+.content__section-subtitle {
+  font-size: inherit;
+  line-height: inherit;
+}
+
 .content__article-list {
   display: grid;
   gap: 20px;
@@ -189,7 +195,8 @@
   justify-content: center;
   align-items: center;
   padding: var(--page-padding, 10px);
-  min-block-size: 100vh;
+  block-size: 100vh;
+  min-block-size: 668px;
 }
 
 .footer__text {
@@ -204,6 +211,11 @@
 @media (width >= 768px) {
   :root {
     --page-padding: 20px;
+  }
+
+  .header,
+  .footer {
+    min-block-size: 1024px;
   }
 
   .header__title {
@@ -269,6 +281,11 @@
 }
 
 @media (width >= 1024px) {
+  .header,
+  .footer {
+    min-block-size: 768px;
+  }
+
   .header__theme-menu {
     justify-self: center;
     align-self: start;
